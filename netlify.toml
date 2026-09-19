@@ -1,0 +1,32 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# API-Weiterleitung an die Netlify Serverless Function
+[[redirects]]
+  from = "/api/optimize-seo"
+  to = "/.netlify/functions/optimize-seo"
+  status = 200
+
+[[redirects]]
+  from = "/api/optimize-seo/"
+  to = "/.netlify/functions/optimize-seo"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# Single Page App Fallback für React (Muss am Ende stehen)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

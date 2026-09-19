@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "App starten (Dev)",
+      "type": "shell",
+      "command": "npm run dev",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Build für Netlify erstellen",
+      "type": "shell",
+      "command": "npm run build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Netlify CLI Deployment (Production)",
+      "type": "shell",
+      "command": "npx netlify deploy --prod",
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "SEO-Text-Optimierer",
+  "description": "Professioneller SEO-Optimierer: Verwandelt Texte in suchmaschinenoptimierte Inhalte, korrigiert Groß-/Kleinschreibung, behebt Rechtschreib- und Grammatikfehler und liefert Meta-Tags.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
